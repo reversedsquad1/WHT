@@ -193,7 +193,10 @@
             margin: 0;
             padding: 0;
             -webkit-font-smoothing: antialiased;
-        }
+            overflow-y: scroll !important; /* Forces the scroll mechanism to exist */
+            -webkit-overflow-scrolling: touch !important; /* Essential for mobile momentum */
+            height: auto !important;
+            }
 
         .heading-container {
             padding: 30px 25px 10px 25px;
