@@ -160,6 +160,13 @@
 <html>
 <head>
     <style>
+        #app {
+    position: fixed; /* THIS IS A SCROLL KILLER */
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    }
         html, body {
             overflow-y: auto !important; /* Forces vertical scrolling */
             overflow-x: hidden !important; /* Prevents awkward side-to-side shifting */
@@ -293,6 +300,22 @@
             OpenSquad (Officially created by 8-Bit Hacc) is a private server which wants to add all of the current content from Squad Busters' final update to the 1.0 version of the game!
         </p>
     </div>
+        <script>
+    // 1. Force the body to be scrollable via JavaScript
+    document.body.style.overflow = 'auto';
+    document.documentElement.style.overflow = 'auto';
+
+    // 2. Kill any "Scroll Hijackers" (Common in game clones)
+    window.addEventListener('wheel', function(e) {
+        e.stopPropagation();
+    }, { passive: true, capture: true });
+
+    window.addEventListener('touchmove', function(e) {
+        e.stopPropagation();
+    }, { passive: true, capture: true });
+
+    console.log("Scroll forces have been unlocked!");
+</script>
 </div>
 </body>
 </html>
