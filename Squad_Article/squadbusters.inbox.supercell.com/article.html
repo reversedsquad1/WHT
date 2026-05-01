@@ -160,22 +160,26 @@
 <html>
 <head>
     <style>
-        img {
-    max-width: 100%;
-    height: auto;
-        }
-
         html, body {
-    overflow: auto !important;
-    height: auto !important;
-    position: relative !important;
-    }
+            overflow-y: auto !important; /* Forces vertical scrolling */
+            overflow-x: hidden !important; /* Prevents awkward side-to-side shifting */
+            height: auto !important; /* Allows the page to grow with your content */
+            position: relative !important; /* Ensures it doesn't stay fixed to the screen */
+            -webkit-overflow-scrolling: touch !important; /* Makes scrolling smooth on iPhones */
+            }
+
+/* Ensures the main content containers don't trap the scroll */
+        .content-body, .heading-container, #app, #root {
+            height: auto !important;
+            overflow: visible !important;
+            display: block !important;
+            }
 
         /* 1. Link the real font from your ripped 'fonts' folder */
         @font-face {
             font-family: 'SquadLatin-Black';
             src: url('bundle/squadbusters/fonts/SquadLatin-Black205e033ed037816028ab.otf');
-        }
+            }
 
         body {
             background-color: #121212; /* Official dark background */
