@@ -305,20 +305,27 @@
         </p>
     </div>
         <script>
-    // 1. Force the body to be scrollable via JavaScript
-    document.body.style.overflow = 'auto';
-    document.documentElement.style.overflow = 'auto';
+    // 1. Force everything to be scrollable at a high level
+    const rootElements = [document.documentElement, document.body, document.querySelector('#app')];
+    rootElements.forEach(el => {
+        if (el) {
+            el.style.setProperty('overflow', 'auto', 'important');
+            el.style.setProperty('height', 'auto', 'important');
+            el.style.setProperty('position', 'relative', 'important');
+        }
+    });
 
-    // 2. Kill any "Scroll Hijackers" (Common in game clones)
-    window.addEventListener('wheel', function(e) {
-        e.stopPropagation();
-    }, { passive: true, capture: true });
+    // 2. The "Nuclear Option": Stop the game engine from stealing scroll events
+    window.addEventListener('wheel', (e) => e.stopPropagation(), true);
+    window.addEventListener('touchmove', (e) => e.stopPropagation(), true);
+    window.addEventListener('touchstart', (e) => e.stopPropagation(), true);
 
-    window.addEventListener('touchmove', function(e) {
-        e.stopPropagation();
-    }, { passive: true, capture: true });
-
-    console.log("Scroll forces have been unlocked!");
+    // 3. One last check: If the engine set the body height to 0 or 100%, fix it
+    setInterval(() => {
+        if (document.body.style.overflow !== 'auto') {
+            document.body.style.overflow = 'auto';
+        }
+    }, 500);
 </script>
 </div>
 </body>
