@@ -160,40 +160,38 @@
 <head>
     <style>
         #app {
-    position: fixed; /* THIS IS A SCROLL KILLER */
+    position: fixed;
     top: 0;
     left: 0;
     right: 0;
     bottom: 0;
     }
         html, body {
-            overflow-y: auto !important; /* Forces vertical scrolling */
-            overflow-x: hidden !important; /* Prevents awkward side-to-side shifting */
-            height: auto !important; /* Allows the page to grow with your content */
-            position: relative !important; /* Ensures it doesn't stay fixed to the screen */
-            -webkit-overflow-scrolling: touch !important; /* Makes scrolling smooth on iPhones */
+            overflow-y: auto !important; 
+            overflow-x: hidden !important; 
+            height: auto !important; 
+            position: relative !important; 
+            -webkit-overflow-scrolling: touch !important;
             }
 
-/* Ensures the main content containers don't trap the scroll */
         .content-body, .heading-container, #app, #root {
             height: auto !important;
             overflow: visible !important;
             display: block !important;
             }
 
-        /* 1. Link the real font from your ripped 'fonts' folder */
         @font-face {
             font-family: 'SquadLatin-Black';
             src: url('bundle/squadbusters/fonts/SquadLatin-Black205e033ed037816028ab.otf') format('opentype');
             }
 
         body {
-            background-color: #121212; /* Official dark background */
+            background-color: #121212; 
             margin: 0;
             padding: 0;
             -webkit-font-smoothing: antialiased;
-            overflow-y: scroll !important; /* Forces the scroll mechanism to exist */
-            -webkit-overflow-scrolling: touch !important; /* Essential for mobile momentum */
+            overflow-y: scroll !important; 
+            -webkit-overflow-scrolling: touch !important; 
             height: auto !important;
             }
 
@@ -220,7 +218,7 @@
         .dot-divider {
             width: 6px;
             height: 6px;
-            background: #4e546a; /* Official Muted Blue-Grey */
+            background: #4e546a; 
             border-radius: 50%;
             margin: 0 12px;
         }
