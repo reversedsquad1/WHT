@@ -267,7 +267,7 @@
         <div class="meta-row">
             <span class="news-label">News</span>
             <div class="dot-divider"></div>
-            <span class="date-label">26 April</span>
+            <span class="date-label">COMMING SOON!</span>
         </div>
 
         <h1 class="article-title">OpenSquad News?!?!</h1>
@@ -308,11 +308,10 @@
         </h5>
             <p>
                 <a  href="https://discord.gg/XUmHqHvxCC" >
-                <img src="Squad_Article/squadbusters.inbox.supercell.com/discord-white-logo-squad.png" />
+                <img src="WHT/Squad_Article/squadbusters.inbox.supercell.com/discord-white-logo-squad.png" />
             </p></a>
     </div>
         <script>
-    // 1. Force everything to be scrollable at a high level
     const rootElements = [document.documentElement, document.body, document.querySelector('#app')];
     rootElements.forEach(el => {
         if (el) {
@@ -322,12 +321,10 @@
         }
     });
 
-    // 2. The "Nuclear Option": Stop the game engine from stealing scroll events
     window.addEventListener('wheel', (e) => e.stopPropagation(), true);
     window.addEventListener('touchmove', (e) => e.stopPropagation(), true);
     window.addEventListener('touchstart', (e) => e.stopPropagation(), true);
 
-    // 3. One last check: If the engine set the body height to 0 or 100%, fix it
     setInterval(() => {
         if (document.body.style.overflow !== 'auto') {
             document.body.style.overflow = 'auto';
