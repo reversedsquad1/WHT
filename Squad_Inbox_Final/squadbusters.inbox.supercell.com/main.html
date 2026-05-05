@@ -171,7 +171,15 @@
         border-radius: 12px;
         cursor: pointer;
     }
-        
+
+    .news-container {
+        display: flex;
+        gap: 15px;
+        width: 100%;
+        max-width: 850px;
+        padding: 15px;
+        box-sizing: border-box;
+    }
         
     .squad-font {
         font-family: "SquadBlack";
@@ -206,35 +214,43 @@
     </style>
 </head>
 
-<body style="background-color: #292c3c; margin: 0; display: flex; justify-content: flex-end; font-family: 'SquadBlack', sans-serif; -webkit-font-smoothing: antialiased;">
-    <div id="inbox" style="width: 100%; max-width: 414px; padding: 15px; box-sizing: border-box;">
+<div class="news-container">
         
-        <div style="background: rgb(19, 17, 17); border-radius: 25px; overflow: hidden; position: relative; border: 1px solid rgba(0,0,0,0.1);">
-            <a href="https://reversedsquad1.github.io/WHT/Squad_Article/squadbusters.inbox.supercell.com/article.html">      
-            <img src="bundle/squadbusters/images/paula_exclaim.avif" style="width: 100%; display: block;">
+       
+        <div class="card-half squad-card">
+            <img src="Нов проект (1).jpg" style="width: 100%; display: block;">
             
-            <div style="padding: 20px; position: relative;">
-                
-                <div style="display: flex; margin-bottom: 12px;">
-    <div style="display: inline-flex; margin-bottom: 12px;">
-    <div style="background: none; display: flex; align-items: center; padding: 0;">
-        <span style="width: 18px; height: 18px; margin-right: 5px;">
-        <span class="squad-font" style="color: #d9ef0c; font-size: 25px; font-weight: 900; text-transform: uppercase;">News</span>
-    </div>
-</div>
-</div>
-                <h2 style="color: #2b2f42; font-size: 24px; font-weight: 900; line-height: 1.1; margin: 0 0 5px 0; letter-spacing: -1.0px;">
-                <span class="squad-font" style="color: #f2f2ee; font-size: 28px;">OpenSquad News?!?!</span>
-                </h2>
-                <p style="color: #7c829c; font-size: 15px; font-weight: 800; margin: 0;">
-                    <span class="squad-font" style="color: #2b2f42; font-size: 20px;">1 May</span>
-                </p>
-                
-                <div style="position: absolute; right: 20px; bottom: 20px; width: 48px; height: 48px; border-radius: 50%; display: flex; align-items: center; justify-content: center; font-size: 24px; font-weight: bold; box-shadow: 0 3px 6px (0,0,0,0.2);">
-                    <img src="bundle/squadbusters/images/09a85525caa35f93cfad.svg"></a>
-                </div>
+            <!-- Pagination Dots (Like the real game) -->
+            <div style="position: absolute; bottom: 15px; width: 100%; display: flex; justify-content: center; gap: 8px;">
+                <div style="width: 12px; height: 12px; background: white; border-radius: 50%; border: 2px solid black;"></div>
+                <div style="width: 12px; height: 12px; background: #555; border-radius: 50%; border: 2px solid black;"></div>
+                <div style="width: 12px; height: 12px; background: #555; border-radius: 50%; border: 2px solid black;"></div>
             </div>
         </div>
+
+        <!-- RIGHT CARD: The News Article -->
+        <div class="card-half squad-card">
+            <a href="https://reversedsquad1.github.io/WHT/Squad_Article/squadbusters.inbox.supercell.com/article.html">
+                <img src="bundle/squadbusters/images/paula_exclaim.avif" style="width: 100%; display: block;">
+                
+                <div style="padding: 20px;">
+                    <div style="margin-bottom: 12px;">
+                        <span class="squad-font" style="color: #d9ef0c; font-size: 22px; text-transform: uppercase;">News</span>
+                        <span class="squad-font" style="color: #7c829c; font-size: 16px; margin-left: 10px;">1 May</span>
+                    </div>
+
+                    <h2 class="squad-font" style="color: #f2f2ee; font-size: 26px; margin: 0 0 10px 0;">OpenSquad News?!?!</h2>
+                    
+                    <!-- Arrow Button -->
+                    <div style="display: flex; justify-content: flex-end; margin-top: 5px;">
+                        <img src="bundle/squadbusters/images/09a85525caa35f93cfad.svg" style="width: 40px;">
+                    </div>
+                </div>
+            </a>
+        </div>
+
     </div>
+</body>
+</html>
 </body>
 </html>
