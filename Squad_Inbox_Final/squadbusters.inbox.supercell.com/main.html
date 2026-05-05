@@ -160,6 +160,19 @@
     }
     .squad-card:active {
             transform: scale(0.95);}
+
+    .read-button {
+        font-family: 'SquadLatin-Black';
+        background-color: #ff33cc;
+        color: white;
+        text-transform: uppercase;
+        padding: 10px 30px;
+        border: 4px solid black;
+        border-radius: 12px;
+        cursor: pointer;
+    }
+        
+        
     .squad-font {
         font-family: "SquadBlack";
         font-weight: 900;
@@ -167,14 +180,13 @@
         line-height: 1.1;
         -webkit-font-smoothing: antialiased;
     }
-    /* This overrides the "Grey Screen" logic */
+
     #root, .app, body {
         display: block !important;
         visibility: visible !important;
         opacity: 1 !important;
     }
 
-    /* This removes the 'Loading' overlay if it's stuck */
     [class*="loading"], [id*="loading"] {
         display: none !important;
     }
@@ -182,20 +194,19 @@
     text-decoration: none !important;
 }
 
-/* Specifically targeting the news card text just in case */
 .news-card, .news-card *, a:hover, a:visited {
     text-decoration: none !important;
     border-bottom: none !important;
 }
         body {
-    overflow-y: scroll !important; /* Forces the scroll mechanism to exist */
-    -webkit-overflow-scrolling: touch !important; /* Essential for mobile momentum */
+    overflow-y: scroll !important; 
+    -webkit-overflow-scrolling: touch !important; 
     height: auto !important;
 }
     </style>
 </head>
 
-<body style="background-color: #292c3c; margin: 0; display: flex; justify-content: center; font-family: 'SquadBlack', sans-serif; -webkit-font-smoothing: antialiased;">
+<body style="background-color: #292c3c; margin: 0; display: flex; justify-content: flex-end; font-family: 'SquadBlack', sans-serif; -webkit-font-smoothing: antialiased;">
     <div id="inbox" style="width: 100%; max-width: 414px; padding: 15px; box-sizing: border-box;">
         
         <div style="background: rgb(19, 17, 17); border-radius: 25px; overflow: hidden; position: relative; border: 1px solid rgba(0,0,0,0.1);">
