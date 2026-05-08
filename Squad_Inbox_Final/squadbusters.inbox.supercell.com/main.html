@@ -153,6 +153,7 @@
         integrity="sha256-GwVUUFhqU79YsDR7tFFWiViSbWzA72zrM7xOcHhbL34=" crossorigin="anonymous">
   
 
+        
         <!doctype html>
 <html lang="en" dir="ltr">
 <head>
@@ -174,19 +175,20 @@
             font-family: 'SquadLatin-Black', sans-serif;
         }
 
-        /* Pure original card - no flex-row to break it */
         .card {
-            width: 300px;
-            height: 170px;
+            width: 320px; /* Locked width to stop the squishing */
+            height: 180px;
             background: #121212;
-            border-radius: 30px;
-            border: 5px solid black;
+            border-radius: 35px;
+            border: 6px solid black;
             position: relative;
             text-decoration: none;
             overflow: hidden;
-            display: block; /* Forces it to stay as one block */
+            display: block; 
+            box-shadow: 0 10px 0 rgba(0,0,0,0.3);
         }
 
+        /* The background image covers the whole card again */
         .card-img {
             width: 100%;
             height: 100%;
@@ -194,33 +196,38 @@
             position: absolute;
             top: 0;
             left: 0;
+            z-index: 1;
         }
 
+        /* Text content floating on top */
         .info-section {
             position: relative;
             z-index: 2;
-            padding: 15px;
+            padding: 20px;
             height: 100%;
             display: flex;
             flex-direction: column;
             justify-content: flex-start;
+            box-sizing: border-box;
         }
 
-        .label-news { color: #e1f500; font-size: 16px; text-transform: uppercase; }
-        .label-date { color: #ffffff; font-size: 14px; margin-left: 5px; opacity: 0.8; }
+        .label-news { color: #e1f500; font-size: 18px; text-transform: uppercase; }
+        .label-date { color: #ffffff; font-size: 14px; margin-left: 8px; opacity: 0.9; }
         
         .title { 
             color: #ffffff; 
-            font-size: 24px; 
+            font-size: 26px; 
             margin-top: 5px;
             line-height: 0.9;
             text-transform: uppercase;
+            /* Added a subtle shadow so it pops against the witch background */
+            text-shadow: 2px 2px 0px #000; 
         }
 
         .arrow-btn {
             position: absolute;
-            right: 12px;
-            bottom: 12px;
+            right: 15px;
+            bottom: 15px;
             width: 35px;
             z-index: 3;
         }
@@ -243,4 +250,3 @@
     </a>
 </body>
 </html>
-
