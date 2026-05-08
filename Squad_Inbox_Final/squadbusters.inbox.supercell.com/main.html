@@ -167,62 +167,47 @@
 
         body {
             background-color: #292c3c;
-            margin: 0;
             display: flex;
             justify-content: center;
             align-items: center;
             min-height: 100vh;
+            margin: 0;
             font-family: 'SquadLatin-Black', sans-serif;
         }
-
-        .card {
-            width: 350px;
-            height: 180px;
-            background: #121212;
-            border-radius: 35px;
-            border: 6px solid black;
-            position: relative;
-            text-decoration: none;
-            overflow: hidden;
-            box-shadow: 0 10px 0 rgba(0,0,0,0.3);
-        }
-
-        .card-img {
-            width: 100%;
-            height: 100%;
-            object-fit: cover;
-            position: absolute;
-            top: 0;
-            left: 0;
-        }
-
-        .info-section {
-            position: relative;
-            z-index: 2;
-            padding: 20px;
-            height: 100%;
-            display: flex;
-            flex-direction: column;
-            justify-content: flex-start;
-            box-sizing: border-box;
-        }
-
-        .label-news { color: #e1f500; font-size: 16px; text-transform: uppercase; }
-        .label-date { color: #ffffff; font-size: 14px; margin-left: 8px; opacity: 0.8; }
         
-        .title { 
-            color: #ffffff; 
-            font-size: 24px; 
-            margin-top: 5px;
-            line-height: 1;
-            text-transform: uppercase;
+        .card {
+            display: flex;
+            overflow: hidden;
+            width: 300px;
+            background: #121212;
+            border-radius: 25px;
+            border: 5px solid black;
+            position: relative;
+            transition: transform 0.1s;
+            text-decoration: none;
         }
+
+        .card:active { transform: scale(0.96); }
+
+        .card-img { width: 100%; display: block; object-fit: cover; }
+
+        .info-section { 
+            position: absolute;
+            bottom: 0;
+            left: 0;
+            padding: 15px; 
+            z-index: 2;
+        }
+
+        .label-news { color: #d9ef0c; font-size: 18px; text-transform: uppercase !important; }
+        .label-date { color: #7c829c; font-size: 14px; margin-left: 10px; }
+        .title { color: #ffffff; font-size: 24px; margin: 8px 0; display: block; }
 
         .arrow-btn {
             position: absolute;
             right: 15px;
             bottom: 15px;
-            width: 30px;
+            width: 35px;
             z-index: 3;
         }
     </style>
@@ -231,15 +216,11 @@
 <body>
     <a href="https://reversedsquad1.github.io/WHT/Squad_Article/squadbusters.inbox.supercell.com/article.html" class="card">
         <img src="bundle/squadbusters/images/paula_exclaim.avif" class="card-img">
-        
         <div class="info-section">
-            <div>
-                <span class="label-news">News</span>
-                <span class="label-date">1 MAY</span>
-            </div>
-            <span class="title">OpenSquad<br>News?!?!</span>
+            <span class="label-news">News</span>
+            <span class="label-date">1 MAY</span>
+            <span class="title">OpenSquad News?!?!</span>
         </div>
-
         <img src="bundle/squadbusters/images/09a85525caa35f93cfad.svg" class="arrow-btn">
     </a>
 </body>
